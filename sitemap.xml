@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
     <url>
-        <loc>https://legrandwebandtutors.co.za/</loc>
-        <priority>1.0</priority>
+        <loc>https://your-site-url/</loc>
     </url>
+
     <url>
-        <loc>https://legrandwebandtutors.co.za/services.html</loc>
-        <priority>0.8</priority>
+        <loc>https://your-site-url/services.html</loc>
     </url>
+
     <url>
-        <loc>https://legrandwebandtutors.co.za/tutoring.html</loc>
-        <priority>0.8</priority>
+        <loc>https://your-site-url/tutoring.html</loc>
     </url>
+
     <url>
-        <loc>https://legrandwebandtutors.co.za/contact.html</loc>
-        <priority>0.7</priority>
+        <loc>https://your-site-url/contact.html</loc>
     </url>
+
 </urlset>
