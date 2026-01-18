@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact | LeGrand Web & Tutors</title>
+    <meta name="description" content="Contact to request a website quote or book tutoring." />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+<header class="site-header">
+    <div class="container header-inner">
+        <a class="brand" href="index.html">
+            <span class="brand-mark" aria-hidden="true"></span>
+            <span class="brand-text">Le-Grand Web & Tutors</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+
+        <nav class="nav" aria-label="Primary">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="services.html">Web Services</a>
+            <a class="nav-link" href="tutoring.html">Tutoring</a>
+            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link active" href="contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="page-hero">
+        <div class="container">
+            <h1>Contact</h1>
+            <p class="lead">
+                Request a website, book tutoring, or ask a question. Use Email or WhatsApp.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="grid two contact-grid">
+                <!-- Form -->
+                <div class="card">
+                    <h2>Request / Booking Form</h2>
+
+                    <form class="form" id="quoteForm" novalidate>
+                        <label>
+                            <span>Your name</span>
+                            <input required name="name" type="text" placeholder="e.g., Sarah" autocomplete="name" />
+                        </label>
+
+                        <label>
+                            <span>What do you need?</span>
+                            <select required name="service">
+                                <option value="" selected disabled>Select a service</option>
+                                <optgroup label="Web">
+                                    <option>1-page website</option>
+                                    <option>3-page website</option>
+                                    <option>Portfolio / CV website</option>
+                                    <option>Fixes & updates</option>
+                                </optgroup>
+                                <optgroup label="Tutoring">
+                                    <option>Primary/High tutoring</option>
+                                    <option>University IT support tutoring</option>
+                                    <option>Weekly tutoring package</option>
+                                </optgroup>
+                            </select>
+                        </label>
+
+                        <label>
+                            <span>Short description</span>
+                            <textarea
+                                    required
+                                    name="details"
+                                    rows="5"
+                                    placeholder="Tell me what you need (pages, content, deadlines, topics, etc.)."
+                            ></textarea>
+                        </label>
+
+                        <label>
+                            <span>Your WhatsApp number</span>
+                            <input name="whatsapp" type="tel" placeholder="e.g., 07X XXX XXXX" autocomplete="tel" />
+                        </label>
+
+                        <div class="form-actions">
+                            <button class="btn primary" type="submit">Send via Email</button>
+                            <button class="btn ghost" type="button" id="whatsAppBtn">Send via WhatsApp</button>
+                        </div>
+
+                        <p class="muted small">
+                            Tip: For websites, include your logo + any photos. For tutoring, include grade/module + topics.
+                        </p>
+                    </form>
+
+                    <!-- Quick test link to help you verify WA number formatting -->
+                    <div class="divider"></div>
+
+                </div>
+
+                <!-- Direct contact -->
+                <aside class="card">
+                    <h2>Direct contact</h2>
+
+                    <div class="contact-box">
+                        <div class="contact-row">
+                            <span class="contact-label">WhatsApp</span>
+                            <!-- IMPORTANT: replace the href number with your real digits-only number -->
+                            <a class="link" id="waDirectLink" href="https://wa.me/27720880388" target="_blank" rel="noopener">
+                                +27 72 088 0388
+                            </a>
+                        </div>
+                        <div class="contact-row">
+                            <span class="contact-label">Email</span>
+                            <a class="link" href="mailto:youremail@example.com">legrantvankradenburg26@gmail.com</a>
+                        </div>
+                        <div class="contact-row">
+                            <span class="contact-label">Location</span>
+                            <span class="muted">South Africa / Potchefstroom / Kathu</span>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <h3>Payment & delivery</h3>
+                    <ul class="list">
+                        <li>Websites: 50% upfront to start</li>
+                        <li>Delivery: 24–72 hours (typical)</li>
+                        <li>1 revision included</li>
+                        <li>Tutoring: pay per session or monthly package</li>
+                    </ul>
+
+                    <div class="divider"></div>
+
+                    <h3>What to send</h3>
+                    <ul class="list">
+                        <li><strong>Website:</strong> business name, services, logo, photos, contact info</li>
+                        <li><strong>Tutoring:</strong> grade/module, topics, test/exam date, what you struggle with</li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>© <span id="year"></span> Le-Grand Van Kradenburg. All rights reserved.</p>
+        <a class="link" href="index.html#services">Services</a>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+
+<!-- Optional helper: makes the "WhatsApp test" link open whatever number you put in the Direct link -->
+<script>
+    // This does NOT send messages; it just helps you test the wa.me link formatting quickly.
+    const waTestLink = document.getElementById("waTestLink");
+    const waDirectLink = document.getElementById("waDirectLink");
+
+    if (waTestLink && waDirectLink) {
+        waTestLink.addEventListener("click", (e) => {
+            e.preventDefault();
+            window.open(waDirectLink.href + "?text=" + encodeURIComponent("Hello, WhatsApp test"), "_blank", "noopener");
+        });
+    }
+</script>
+</body>
+</html>
